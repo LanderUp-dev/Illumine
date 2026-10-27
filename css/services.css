@@ -1,0 +1,84 @@
+/* Botão "Ver mais" (serviços e produtos) */
+.section__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Cartões dos serviços */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-cream);
+  box-shadow: var(--shadow-card);
+}
+
+.service-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--color-sand) 0%, #c4a58f 100%);
+  overflow: hidden;
+}
+
+.service-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-card__placeholder {
+  width: 34%;
+  opacity: 0.55;
+  filter: brightness(0.35);
+}
+
+.service-card__body {
+  padding: 22px 24px 28px;
+}
+
+.service-card__title {
+  font-family: var(--font-deck);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.service-card__text {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
+/* Placeholder (logo) quando o item não tem imagem.
+   Precisa de mais especificidade que ".service-card__media img" acima. */
+.service-card__media .service-card__placeholder {
+  width: 34%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Duração e preço no cartão */
+.service-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: var(--color-wine);
+}
+
+.service-card__price {
+  font-weight: 500;
+}
+
+/* Mensagem de carregamento / erro acima dos carrosséis da home */
+.section__status {
+  margin-bottom: 32px;
+  text-align: center;
+  color: var(--color-text-muted);
+}

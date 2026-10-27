@@ -1,0 +1,63 @@
+/* Carrossel genérico (usado pelos serviços) */
+.carousel {
+  position: relative;
+}
+
+.carousel__track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 4px; /* o encaixe respeita o padding: no início, scrollLeft fica em 0 */
+  scroll-behavior: smooth;
+  padding: 8px 4px 24px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__track > * {
+  flex: 0 0 calc((100% - 48px) / 3);
+  scroll-snap-align: start;
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  margin-top: -36px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-wine);
+  color: var(--color-cream);
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  transition: background var(--transition), opacity var(--transition), transform var(--transition);
+}
+
+.carousel__btn:hover {
+  background: var(--color-wine-dark);
+  transform: scale(1.06);
+}
+
+.carousel__btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+  transform: none;
+}
+
+.carousel__btn--prev {
+  left: -24px;
+}
+
+.carousel__btn--next {
+  right: -24px;
+}

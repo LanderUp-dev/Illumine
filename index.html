@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Illumine Hair Studio | Juiz de Fora</title>
+  <meta name="description" content="Illumine Hair Studio — salão de beleza no Pátio Bahamas São Vicente, em Juiz de Fora - MG. Conheça nossa equipe e fale conosco pelo WhatsApp.">
+  <meta name="theme-color" content="#2B1B18">
+
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonte reserva dos títulos (usada enquanto os arquivos da Canela não estão em assets/fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/instagram.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/team.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="header__logo" aria-label="Illumine Hair Studio - início">
+        <img src="assets/img/logo.png" alt="Logo Illumine Hair Studio">
+      </a>
+
+      <button class="header__toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="header__nav" id="menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a href="#contato" class="btn btn--small header__cta">Fale conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- INÍCIO -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <img class="hero__logo" src="assets/img/logo.png" alt="Illumine Hair Studio">
+        <p class="hero__tagline">Realce a sua beleza</p>
+        <div class="hero__actions">
+          <a href="#contato" class="btn">Fale com a gente</a>
+          <a href="#servicos" class="btn btn--outline-light">Nossos serviços</a>
+        </div>
+      </div>
+      <a href="#sobre" class="hero__scroll" aria-label="Rolar para a próxima seção"><span></span></a>
+    </section>
+
+    <!-- SOBRE O SALÃO -->
+    <section class="section section--alt about" id="sobre">
+      <div class="container">
+        <div class="about__content">
+          <span class="section__eyebrow">Sobre o salão</span>
+          <h2 class="section__title">Illumine Hair Studio</h2>
+          <p id="aboutText">
+            Aqui entra o texto sobre o salão: nossa história, nossos valores e o que
+            torna a experiência na Illumine única. (Conteúdo a ser detalhado.)
+          </p>
+        </div>
+
+        <!-- Os 3 vídeos do Instagram ficam sempre à mostra (dados em js/data/instagram.js) -->
+        <div class="reels" id="reelsGrid" aria-label="Vídeos do Instagram do salão"></div>
+
+        <div class="about__social">
+          <a class="btn" id="instagramLink" href="https://www.instagram.com/illumine.studiohair/" target="_blank" rel="noopener">Seguir no Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section class="section team" id="equipe">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__eyebrow">Quem faz acontecer</span>
+          <h2 class="section__title">Nossa equipe</h2>
+          <p class="section__subtitle">Conheça os profissionais da Illumine.</p>
+        </header>
+
+        <div class="team__grid" id="teamGrid"></div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS (CARROSSEL, dados da planilha) -->
+    <section class="section section--alt services" id="servicos">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__eyebrow">O que fazemos</span>
+          <h2 class="section__title">Nossos serviços</h2>
+          <p class="section__subtitle">Um pouco do trabalho realizado no salão.</p>
+        </header>
+
+        <p class="section__status" id="servicesStatus" role="status" aria-live="polite">Carregando serviços…</p>
+
+        <div class="carousel" id="servicesCarousel" aria-roledescription="carrossel" aria-label="Serviços do salão" hidden>
+          <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Anterior">&#10094;</button>
+          <div class="carousel__track" id="servicesTrack" tabindex="0"></div>
+          <button class="carousel__btn carousel__btn--next" type="button" aria-label="Próximo">&#10095;</button>
+        </div>
+
+        <div class="section__more">
+          <a class="btn" href="servicos.html">Ver mais serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUTOS (CARROSSEL, dados da planilha) -->
+    <section class="section products" id="produtos">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__eyebrow">Para cuidar em casa</span>
+          <h2 class="section__title">Nossos produtos</h2>
+          <p class="section__subtitle">Produtos vendidos no salão.</p>
+        </header>
+
+        <p class="section__status" id="productsStatus" role="status" aria-live="polite">Carregando produtos…</p>
+
+        <div class="carousel" id="productsCarousel" aria-roledescription="carrossel" aria-label="Produtos vendidos no salão" hidden>
+          <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Anterior">&#10094;</button>
+          <div class="carousel__track" id="productsTrack" tabindex="0"></div>
+          <button class="carousel__btn carousel__btn--next" type="button" aria-label="Próximo">&#10095;</button>
+        </div>
+
+        <div class="section__more">
+          <a class="btn" href="produtos.html">Ver mais produtos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section section--dark contact" id="contato">
+      <div class="container contact__grid">
+        <div class="contact__content">
+          <span class="section__eyebrow">Contato</span>
+          <h2 class="section__title">Fale com o salão</h2>
+          <p>Envie sua mensagem e continue a conversa direto pelo nosso WhatsApp.</p>
+
+          <form class="contact__form" id="whatsappForm" novalidate>
+            <div class="form__group">
+              <label for="contactName">Seu nome</label>
+              <input type="text" id="contactName" name="name" placeholder="Como podemos te chamar?" autocomplete="name" required>
+            </div>
+            <div class="form__group">
+              <label for="contactMessage">Mensagem</label>
+              <textarea id="contactMessage" name="message" rows="4" placeholder="Escreva aqui sua mensagem..." required></textarea>
+            </div>
+            <p class="form__error" id="formError" role="alert" hidden></p>
+            <p class="form__fallback" id="formFallback" hidden>
+              Se o WhatsApp não abriu,
+              <a id="formFallbackLink" href="#" target="_blank" rel="noopener">clique aqui para continuar a conversa</a>.
+            </p>
+            <button type="submit" class="btn btn--whatsapp">
+              <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16.04 3C9.4 3 4.02 8.38 4.02 15.02c0 2.12.55 4.19 1.6 6.01L4 29l8.17-2.14a12 12 0 0 0 5.87 1.5h.01c6.63 0 12.02-5.39 12.02-12.02A11.95 11.95 0 0 0 16.04 3Zm0 21.9h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-4.85 1.27 1.3-4.73-.24-.38a9.88 9.88 0 0 1-1.51-5.25c0-5.46 4.45-9.9 9.92-9.9a9.84 9.84 0 0 1 9.9 9.91c0 5.46-4.45 9.67-9.11 9.67Zm5.43-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z"/></svg>
+              Enviar pelo WhatsApp
+            </button>
+          </form>
+        </div>
+
+        <div class="contact__map">
+          <iframe
+            id="salonMap"
+            title="Localização do Illumine Hair Studio"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+          <a class="contact__maplink" id="mapLink" href="#" target="_blank" rel="noopener">Abrir no Google Maps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img class="footer__logo" src="assets/img/logo.png" alt="Illumine Hair Studio">
+      <address class="footer__address">
+        <span data-salon="address"></span><br>
+        <a data-salon="phoneLink" href="#"></a>
+      </address>
+      <p class="footer__copy">&copy; <span id="year"></span> Illumine Hair Studio. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a class="whatsapp-float" id="whatsappFloat" href="#" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" fill="currentColor"><path d="M16.04 3C9.4 3 4.02 8.38 4.02 15.02c0 2.12.55 4.19 1.6 6.01L4 29l8.17-2.14a12 12 0 0 0 5.87 1.5h.01c6.63 0 12.02-5.39 12.02-12.02A11.95 11.95 0 0 0 16.04 3Zm0 21.9h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-4.85 1.27 1.3-4.73-.24-.38a9.88 9.88 0 0 1-1.51-5.25c0-5.46 4.45-9.9 9.92-9.9a9.84 9.84 0 0 1 9.9 9.91c0 5.46-4.45 9.67-9.11 9.67Zm5.43-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z"/></svg>
+  </a>
+
+  <!-- Scripts (ordem importa: configuração e dados -> módulos -> main) -->
+  <script src="js/config.js"></script>
+  <script src="js/data/team.js"></script>
+  <script src="js/data/instagram.js"></script>
+  <script src="js/data/services-sample.js"></script>
+  <script src="js/data/products-sample.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/team.js"></script>
+  <script src="js/instagram.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/sheets.js"></script>
+  <script src="js/catalog-ui.js"></script>
+  <script src="js/home-catalog.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

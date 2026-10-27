@@ -1,0 +1,118 @@
+/*
+ * Páginas de catálogo (servicos.html e produtos.html) — estilos funcionais e simples.
+ * O visual final será definido depois; aqui só o necessário para usar o filtro e a lista.
+ */
+.catalog {
+  padding: calc(var(--header-height) + 56px) 0 96px;
+}
+
+/* Filtro por tipo */
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.filter__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 1px solid var(--color-sand);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.filter__chip:hover {
+  border-color: var(--color-wine);
+}
+
+.filter__chip.is-active {
+  background: var(--color-wine);
+  border-color: var(--color-wine);
+  color: var(--color-cream);
+}
+
+.filter__count {
+  min-width: 1.6em;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: rgba(130, 32, 37, 0.12);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.filter__chip.is-active .filter__count {
+  background: rgba(244, 239, 234, 0.25);
+}
+
+/* Cartões brancos sobre o fundo creme da página */
+.catalog .service-card {
+  background: var(--color-white);
+}
+
+/* Estado e avisos */
+.catalog__status {
+  margin-bottom: 32px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.catalog__notice {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  padding: 12px 16px;
+  border: 1px dashed var(--color-sand);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.catalog__warnings {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.catalog__warnings li {
+  margin: 6px 0 0 18px;
+}
+
+/* Grupos por tipo */
+.catalog__group + .catalog__group {
+  margin-top: 56px;
+}
+
+.catalog__group-title {
+  margin-bottom: 24px;
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Erro ao carregar */
+.catalog__error {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.catalog__error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}

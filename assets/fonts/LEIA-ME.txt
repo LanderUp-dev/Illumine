@@ -1,0 +1,28 @@
+FONTES CANELA — Commercial Type (commercialtype.com)
+
+A Canela é uma fonte comercial. O PDF "Canela Collection" é apenas um catálogo
+e não contém arquivos de fonte utilizáveis no site. Para usar a Canela, é preciso
+ter a licença web e colocar aqui os arquivos de fonte web (.woff2).
+
+Nomes esperados pelo site (css/fonts.css). O .woff é opcional (reserva):
+
+  Canela-Regular.woff2
+  Canela-Medium.woff2
+  Canela-RegularItalic.woff2
+  CanelaDeck-Regular.woff2
+  CanelaDeck-Medium.woff2
+  CanelaText-Regular.woff2
+  CanelaText-Medium.woff2
+
+Se os arquivos que você receber tiverem outros nomes, renomeie-os para os acima
+ou ajuste os caminhos em css/fonts.css.
+
+O site usa apenas os pesos Regular (400), Medium (500) e Regular Italic.
+
+Onde cada família é usada:
+  Canela       — títulos de seção e frase de destaque (tamanhos grandes)
+  Canela Deck  — nomes dos serviços e da equipe (tamanhos médios)
+  Canela Text  — textos, menu, botões e formulário
+
+Enquanto os arquivos não estiverem aqui, o site mostra fontes reserva
+(Cormorant Garamond nos títulos e Georgia no texto).

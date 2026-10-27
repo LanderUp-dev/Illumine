@@ -1,0 +1,190 @@
+/* Reset e estilos base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-text);
+  background: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-sand);
+  outline-offset: 2px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Seções */
+.section {
+  padding: 96px 0;
+}
+
+.section--alt {
+  background: var(--color-white);
+}
+
+.section--dark {
+  background: var(--color-dark);
+  color: var(--color-cream);
+}
+
+.section__header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+
+.section__eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-wine);
+  margin-bottom: 12px;
+}
+
+.section--dark .section__eyebrow {
+  color: var(--color-sand);
+}
+
+.section__title {
+  font-family: var(--font-title);
+  font-weight: 500;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section__subtitle {
+  color: var(--color-text-muted);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border: 2px solid var(--color-wine);
+  border-radius: 999px;
+  background: var(--color-wine);
+  color: var(--color-cream);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.btn:hover {
+  background: var(--color-wine-dark);
+  border-color: var(--color-wine-dark);
+  transform: translateY(-2px);
+}
+
+.btn--small {
+  padding: 10px 22px;
+  font-size: 0.75rem;
+}
+
+.btn--outline-light {
+  background: transparent;
+  border-color: var(--color-sand);
+  color: var(--color-cream);
+}
+
+.btn--outline-light:hover {
+  background: var(--color-sand);
+  border-color: var(--color-sand);
+  color: var(--color-dark);
+}
+
+.btn--whatsapp {
+  background: var(--color-whatsapp);
+  border-color: var(--color-whatsapp);
+  color: #0b3d1e;
+  width: 100%;
+}
+
+.btn--whatsapp:hover {
+  background: #1fb455;
+  border-color: #1fb455;
+}
+
+/* Botão flutuante do WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 90;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-whatsapp);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

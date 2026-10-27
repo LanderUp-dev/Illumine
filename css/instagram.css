@@ -1,0 +1,90 @@
+/* Vídeos do Instagram: sempre 3, sem carrossel */
+
+/* Moldura com marcação nos cantos */
+.reels {
+  --reels-mark: var(--color-wine);
+  --reels-mark-size: 44px;
+  --reels-mark-weight: 3px;
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px;
+  padding: 48px 40px;
+}
+
+.reels::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--reels-mark), var(--reels-mark)) top left / var(--reels-mark-size) var(--reels-mark-weight) no-repeat,
+    linear-gradient(var(--reels-mark), var(--reels-mark)) top left / var(--reels-mark-weight) var(--reels-mark-size) no-repeat,
+    linear-gradient(var(--reels-mark), var(--reels-mark)) top right / var(--reels-mark-size) var(--reels-mark-weight) no-repeat,
+    linear-gradient(var(--reels-mark), var(--reels-mark)) top right / var(--reels-mark-weight) var(--reels-mark-size) no-repeat,
+    linear-gradient(var(--reels-mark), var(--reels-mark)) bottom left / var(--reels-mark-size) var(--reels-mark-weight) no-repeat,
+    linear-gradient(var(--reels-mark), var(--reels-mark)) bottom left / var(--reels-mark-weight) var(--reels-mark-size) no-repeat,
+    linear-gradient(var(--reels-mark), var(--reels-mark)) bottom right / var(--reels-mark-size) var(--reels-mark-weight) no-repeat,
+    linear-gradient(var(--reels-mark), var(--reels-mark)) bottom right / var(--reels-mark-weight) var(--reels-mark-size) no-repeat;
+}
+
+/* Pequeno losango no centro do topo, como marcação */
+.reels::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: var(--color-sand);
+  border: 2px solid var(--color-wine);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.reel-card {
+  flex: 1 1 326px;
+  min-width: 326px; /* largura mínima exigida pela incorporação do Instagram */
+  max-width: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.reel-card .instagram-media {
+  margin: 0;
+}
+
+/* Cartão exibido enquanto o vídeo não carrega */
+.reel-card__link {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 9 / 14;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, var(--color-dark) 0%, var(--color-wine) 140%);
+  color: var(--color-cream);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-card);
+}
+
+.reel-card__link:hover {
+  color: var(--color-sand);
+}
+
+@media (max-width: 600px) {
+  .reels {
+    gap: 32px;
+    padding: 36px 0;
+  }
+
+  .reels::before {
+    --reels-mark-size: 32px;
+  }
+}

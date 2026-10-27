@@ -1,0 +1,21 @@
+/* Produtos: variação do cartão de serviço (foto do produto inteira, sobre fundo branco) */
+.service-card--product {
+  background: var(--color-white);
+}
+
+.service-card--product .service-card__media {
+  aspect-ratio: 1;
+  background: var(--color-white);
+}
+
+.service-card--product .service-card__media img {
+  object-fit: contain;
+  padding: 12px;
+}
+
+/* Logo usada quando o produto não tem foto */
+.service-card--product .service-card__media .service-card__placeholder {
+  width: 34%;
+  height: auto;
+  padding: 0;
+}

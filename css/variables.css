@@ -1,0 +1,30 @@
+/* Paleta e variáveis globais do Illumine Hair Studio */
+:root {
+  /* Cores base do salão */
+  --color-wine: #822025;
+  --color-cream: #F4EFEA;
+  --color-dark: #2B1B18;
+  --color-sand: #D5BCA9;
+
+  /* Variações derivadas */
+  --color-wine-dark: #6a1a1e;
+  --color-dark-soft: #3a2723;
+  --color-text: #2B1B18;
+  --color-text-muted: #6b5a55;
+  --color-white: #ffffff;
+  --color-whatsapp: #25D366;
+
+  /* Tipografia */
+  --font-title: 'Canela', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-deck: 'Canela Deck', 'Canela', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'Canela Text', Georgia, 'Times New Roman', serif;
+
+  /* Layout */
+  --container-width: 1160px;
+  --header-height: 76px;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow-soft: 0 10px 30px rgba(43, 27, 24, 0.12);
+  --shadow-card: 0 6px 20px rgba(43, 27, 24, 0.10);
+  --transition: 0.3s ease;
+}

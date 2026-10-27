@@ -1,0 +1,117 @@
+/* Contato */
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: stretch;
+}
+
+.contact__content p {
+  color: rgba(244, 239, 234, 0.8);
+  margin-bottom: 28px;
+}
+
+.contact__form {
+  display: grid;
+  gap: 18px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form__group label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-sand);
+}
+
+.form__group input,
+.form__group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(213, 188, 169, 0.4);
+  border-radius: var(--radius-sm);
+  background: rgba(244, 239, 234, 0.06);
+  color: var(--color-cream);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.form__group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form__group input::placeholder,
+.form__group textarea::placeholder {
+  color: rgba(244, 239, 234, 0.45);
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+  outline: none;
+  border-color: var(--color-sand);
+  background: rgba(244, 239, 234, 0.1);
+}
+
+.form__group .is-invalid {
+  border-color: #ff8a8a;
+}
+
+.form__error {
+  font-size: 0.85rem;
+  color: #ffb3b3;
+}
+
+.form__fallback {
+  font-size: 0.85rem;
+  color: rgba(244, 239, 234, 0.8);
+}
+
+.form__fallback a {
+  color: var(--color-sand);
+  text-decoration: underline;
+}
+
+.contact__map {
+  position: relative;
+  min-height: 380px;
+  background: var(--color-dark-soft);
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid rgba(213, 188, 169, 0.3);
+}
+
+.contact__maplink {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--color-cream);
+  color: var(--color-dark);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: var(--shadow-card);
+  transition: background var(--transition), color var(--transition);
+}
+
+.contact__maplink:hover {
+  background: var(--color-sand);
+}
+
+.contact__map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  border: 0;
+  filter: grayscale(0.25) contrast(1.05);
+}
