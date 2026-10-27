@@ -15,10 +15,10 @@ window.SALON = {
    * e cole os links abaixo. Enquanto estiverem vazios, a página mostra dados de exemplo.
    */
   sheets: {
-    servicesCsvUrl: '',   // link CSV da aba "Serviços"
-    typesCsvUrl: '',      // link CSV da aba "Tipos"
-    productsCsvUrl: '',   // link CSV da aba "Produtos"
-    categoriesCsvUrl: ''  // link CSV da aba "Categorias"
+    servicesCsvUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS3-QTuTU3Jq2xrLqko9soemdV-rlb7g4XTFjQ-R5v8J8A5jOcCQ2xjMuSA_fp3xRbx8VUGnQ76tS-L/pub?gid=731044313&single=true&output=csv',   // link CSV da aba "Serviços"
+    typesCsvUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS3-QTuTU3Jq2xrLqko9soemdV-rlb7g4XTFjQ-R5v8J8A5jOcCQ2xjMuSA_fp3xRbx8VUGnQ76tS-L/pub?gid=1115793963&single=true&output=csv',      // link CSV da aba "Tipos"
+    productsCsvUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS3-QTuTU3Jq2xrLqko9soemdV-rlb7g4XTFjQ-R5v8J8A5jOcCQ2xjMuSA_fp3xRbx8VUGnQ76tS-L/pub?gid=39913258&single=true&output=csv',   // link CSV da aba "Produtos"
+    categoriesCsvUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS3-QTuTU3Jq2xrLqko9soemdV-rlb7g4XTFjQ-R5v8J8A5jOcCQ2xjMuSA_fp3xRbx8VUGnQ76tS-L/pub?gid=234956941&single=true&output=csv'  // link CSV da aba "Categorias"
   },
 
   /**
